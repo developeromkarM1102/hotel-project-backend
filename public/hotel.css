@@ -843,9 +843,6 @@ input[type="radio"]:checked+label {
   color: #2cdef2;
 }
 
-/* -------------------- FIXED NAVBAR + MOBILE MENU -------------------- */
-
-/* Toggle Button */
 .menu-btn {
   display: none;
   font-size: 30px;
@@ -886,17 +883,18 @@ header {
   flex-direction: column;
   background: #000;
   position: fixed;
-  top: 60px;
+  top: 70px;
   right: 0;
   width: 220px;
   padding: 20px;
-  border-left: 2px solid #2af3e6;
+  border-left: 2px solid #f7fafa;
+  border-bottom: 2px solid #f7fafa;
+  border-right: 2px solid #f7fafa;
   gap: 15px;
 }
 
-/* Links inside mobile menu */
 #mobileMenu a {
-  color: #2af3e6;
+  color: white;
   text-decoration: none;
   font-size: 18px;
 }

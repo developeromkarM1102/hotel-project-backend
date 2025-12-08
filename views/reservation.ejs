@@ -11,7 +11,7 @@
 <body>
     <header>
     <h1>Hotel Restoff</h1>
-    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+    <div class="menu-btn" onclick="toggleMenu()"><span id="menuIcon">&#9776;</span></div>
     <nav id="mobileMenu">
       <a href="/">Home</a>
       <a href="/about">About</a>
@@ -55,14 +55,14 @@
 
             <label>Seating Preference</label><br>
             <input type="radio" id="AC" name="seating" value="AC" required>
-            <label for="AC">AC Hall</label><br>
+            <label for="AC" id="AC">AC Hall</label><br>
 
             <input type="radio" id="non-AC" name="seating" value="non-AC">
-            <label for="non-AC">Non-AC Hall</label><br>
+            <label for="non-AC" id="non-AC">Non-AC Hall</label><br>
 
             <button id="Submitreservation" type="submit">Reserve Table</button>
             <button id="cancelreservation" type="reset">Cancel Table</button>
-        </form>
+        </form><br><br>
     </div>
     <footer class="footer"><br>
         &copy; 2025 Hotel Restoff || All right reserved.

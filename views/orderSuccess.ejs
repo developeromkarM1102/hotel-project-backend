@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Successful | Hotel Restoff</title>
+  <link rel="stylesheet" href="/hotel.css">
   <style>
     body {
       margin: 0;
@@ -124,17 +125,28 @@
 </head>
 
 <body>
-
+   <header>
+    <h1>Hotel Restoff</h1>
+    <div class="menu-btn" onclick="toggleMenu()"><span id="menuIcon">&#9776;</span></div>
+    <nav id="mobileMenu">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/order">Order Now</a>
+      <a href="/contact">Contact</a>
+      <a href="/Login" class="login-btn">Login</a>
+    </nav>
+  </header><br><br>
   <div class="success-card">
     <div class="success-icon">✅</div>
     <h1>Order Placed Successfully!</h1>
     <p>Thank you, <%= name %>! Your order has been received and is being prepared.<br>
       Table Number: <strong><%= tableNo %></strong><br>
-      Order Details: <em><%= order %></em>
+      Order Details:<br><em><%- order.split(',').join('<br>') %></em> 
     </p>
     <a href="/" class="btn btn-home">Back to Home</a>
     <a href="/order" class="btn btn-order">Place Another Order</a>
   </div>
+  <script src="/hotel.js"></script>
 </body>
 
 </html>

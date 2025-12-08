@@ -1,7 +1,17 @@
 
-window.toggleMenu = function() {
-    document.getElementById("mobileMenu").classList.toggle("active");
-}
+window.toggleMenu = function () {
+    const menu = document.getElementById("mobileMenu");
+    const icon = document.getElementById("menuIcon");
+
+    menu.classList.toggle("active");
+
+    if (menu.classList.contains("active")) {
+        icon.innerHTML = "&times;"; 
+    } else {
+        icon.innerHTML = "&#9776;"; 
+    }
+};
+
 
 
 window.addEventListener("load", function () {
@@ -110,15 +120,26 @@ addButtons.forEach(button => {
         const dishName = card.querySelector("h3").textContent;
         const qty = parseInt(card.querySelector(".qty-input").value) || 1;
 
-        const existing = orders.find(o => o.name === dishName);
+        const dishPrice = parseInt(
+            card.querySelector(".price").textContent.replace(/\D/g, "")
+        ) || 0;
+
+        let existing = orders.find(o => o.name === dishName);
+
         if (existing) {
             existing.qty += qty;
+            existing.total = existing.qty * existing.unitPrice;
         } else {
-            orders.push({ name: dishName, qty: qty });
+            orders.push({
+                name: dishName,
+                qty: qty,
+                unitPrice: dishPrice,     
+                total: qty * dishPrice    
+            });
         }
 
         updateOrderText();
-        showToast(` ${dishName} × ${qty} added to your order ✅`);
+        showToast(`${dishName} × ${qty} added to your order ✅`);
     });
 });
 
@@ -129,6 +150,7 @@ cancelButtons.forEach(button => {
         const dishName = card.querySelector("h3").textContent;
 
         const index = orders.findIndex(o => o.name === dishName);
+
         if (index !== -1) {
             orders.splice(index, 1);
             updateOrderText();
@@ -142,9 +164,21 @@ cancelButtons.forEach(button => {
 // Update order box
 function updateOrderText() {
     if (orderText) {
-        orderText.value = orders.map(o => `${o.qty} x ${o.name}`).join("\n");
+
+        let text = orders
+            .map(o => `${o.qty} x ${o.name} = ₹${o.total}`)
+            .join("\n");
+
+        const total = orders.reduce((sum, o) => sum + o.total, 0);
+
+        if (orders.length > 0) {
+            text += `\n\n---------------------\n\nTotal = ₹${total}`;
+        }
+
+        orderText.value = text;
     }
 }
+
 
 // Toast message
 function showToast(message) {

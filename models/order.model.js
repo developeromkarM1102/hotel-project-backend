@@ -18,6 +18,10 @@ const orderSchema = new mongoose.Schema({
         required: true
     },
 
+    total: {
+        type: Number,
+    },
+
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',

@@ -11,7 +11,7 @@
 <body>
   <header>
     <h1>Hotel Restoff</h1>
-    <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+    <div class="menu-btn" onclick="toggleMenu()"><span id="menuIcon">&#9776;</span></div>
     <nav id="mobileMenu">
       <a href="/">Home</a>
       <a href="/about">About</a>
@@ -46,7 +46,7 @@
         <img src="images/veg-manch.jpeg" alt="veg-manch">
         <h3>Veg Manchurian</h3>
         <p>Filled with taste and spice.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label>Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -59,7 +59,7 @@
         <img src="images/paneer-chili.jpeg" loading="lazy" alt="paneer-chili">
         <h3>Paneer Chilli Dry</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -72,7 +72,7 @@
         <img src="images/hara-bhara-kabeeb.jpeg" loading="lazy" alt="hara-bhara-kabeeb">
         <h3>Hara Bhara Kebab</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price" >₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -85,7 +85,7 @@
         <img src="images/spring-roll.jpeg" loading="lazy" alt="spring-roll">
         <h3>Veg Spring Roll</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -98,7 +98,7 @@
         <img src="images/masalapapad.jpeg" loading="lazy" alt="masalapapad">
         <h3>Masala Papad</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -111,7 +111,7 @@
         <img src="images/corn-cheese.jpeg" loading="lazy" alt="corn-cheese">
         <h3>Corn Cheese Balls</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -124,7 +124,7 @@
         <img src="images/Tandoori-mushroom.JPG" loading="lazy" alt="Tandoori-mushroom">
         <h3>Tandoori Mushroom</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -137,7 +137,7 @@
         <img src="images/veg-thal.jpeg" loading="lazy" alt="Veg Thali">
         <h3>Veg Thali</h3>
         <p>A traditional Indian thali with dal, roti, sabzi & sweets.</p>
-        <span>₹250/-</span><br><br>
+        <span class="price">₹250/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -150,7 +150,7 @@
         <img src="images/paneer.jpeg" loading="lazy" alt="Paneer">
         <h3>Butter Paneer</h3>
         <p>Delicious and tasty Paneer.</p>
-        <span>₹350/-</span><br><br>
+        <span class="price">₹350/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -163,7 +163,7 @@
         <img src="images/paneer.jpeg" loading="lazy" alt="Paneer">
         <h3>Butter Paneer Masala</h3>
         <p>Delicious and tasty Paneer.</p>
-        <span>₹350/-</span><br><br>
+        <span class="price">₹350/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -176,7 +176,7 @@
         <img src="images/paneer.jpeg" loading="lazy" alt="Paneer">
         <h3>Mutter Paneer</h3>
         <p>Delicious and tasty Paneer.</p>
-        <span>₹350/-</span><br><br>
+        <span class="price">₹350/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -189,7 +189,7 @@
         <img src="images/roti.jpeg" loading="lazy" alt="roti">
         <h3>Butter Roti</h3>
         <p>Fresh, Hot Loaded with buttur.</p>
-        <span>₹200/-</span><br><br>
+        <span class="price">₹200/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -202,7 +202,7 @@
         <img src="images/kadai-paneer.jpeg" loading="lazy" alt="kadai-paneer">
         <h3>Kadai Paneer</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -215,7 +215,7 @@
         <img src="images/veg-kolhapuri.jpeg" loading="lazy" alt="veg-kolhapuri">
         <h3>Veg Kolhapuri</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -228,7 +228,7 @@
         <img src="images/palak-paneer.JPG" loading="lazy" alt="palak-paneer">
         <h3>Palak Paneer</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -241,7 +241,7 @@
         <img src="images/veg-handi.jpeg" loading="lazy" alt="veg-handi">
         <h3>Veg Handi</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -254,7 +254,7 @@
         <img src="images/dal-tadka.jpeg" loading="lazy" alt="dal-tadka">
         <h3>Dal Tadka</h3>
         <p>Smooth And tasty.</p>
-        <span>₹100/-</span><br><br>
+        <span class="price">₹100/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -267,7 +267,7 @@
         <img src="images/Tandoori.jpeg" loading="lazy" alt="Tandoori">
         <h3>Tandoori Roti</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -280,7 +280,7 @@
         <img src="images/butter-naan.jpeg" loading="lazy" alt="butter-naan">
         <h3>Butter Naan</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -293,7 +293,7 @@
         <img src="images/garlic-naan.jpeg" loading="lazy" alt="garlic-naan">
         <h3>Garlic Naan</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -306,7 +306,7 @@
         <img src="images/Cheese-naan.jpeg" loading="lazy" alt="Cheese-naan">
         <h3>Cheese Naan</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -319,7 +319,7 @@
         <img src="images/laccha-paratha.jpeg" loading="lazy" alt="laccha-paratha">
         <h3>Laccha Paratha</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -332,7 +332,7 @@
         <img src="images/plain-paratha.jpeg" loading="lazy" alt="plain-paratha">
         <h3>Plain Paratha</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -345,7 +345,7 @@
         <img src="images/jeera-rice.jpg" loading="lazy" alt="jeera-rice">
         <h3>Jeera Rice</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -358,7 +358,7 @@
         <img src="images/friedrice.jpg" loading="lazy" alt="friedrice">
         <h3>Veg Fried Rice</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -371,7 +371,7 @@
         <img src="images/veg-pulao.jpeg" loading="lazy" alt="veg-pulao">
         <h3>Veg Pulao</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -384,7 +384,7 @@
         <img src="images/veg-biryani.jpg" loading="lazy" alt="veg-biryani">
         <h3>Veg Biryani</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -397,7 +397,7 @@
         <img src="images/curd-rice.jpeg" loading="lazy" alt="curd-rice">
         <h3>Curd Rice</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -410,7 +410,7 @@
         <img src="images/plain-ric.jpeg" loading="lazy" alt="plain-ric">
         <h3>Plain Rice</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -423,7 +423,7 @@
         <img src="images/ice-cream.jpeg" loading="lazy" alt="ice-cream">
         <h3>Ice Cream (Vanilla / Chocolate / Mango)</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -436,7 +436,7 @@
         <img src="images/gulabjamun.jpg" loading="lazy" alt="gulabjamun">
         <h3>Gulab Jamun</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -449,7 +449,7 @@
         <img src="images/Rasgulla.jpeg" loading="lazy" alt="Rasgulla">
         <h3>Rasgulla</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -462,7 +462,7 @@
         <img src="images/Rasmalai.jpg" loading="lazy" alt="Rasmalai">
         <h3>Rasmalai</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -475,7 +475,7 @@
         <img src="images/gajar-halwa.jpeg" loading="lazy" alt="gajar-halwa">
         <h3>Gajar Halwa</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -488,7 +488,7 @@
         <img src="images/kulfi.jpeg" loading="lazy" alt="kulfi">
         <h3>Kesar Kulfi</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -501,7 +501,7 @@
         <img src="images/lime-soda.jpeg" loading="lazy" alt="lime-soda">
         <h3>Fresh Lime Soda</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -514,7 +514,7 @@
         <img src="images/buttermilk.jpeg" loading="lazy" alt="buttermilk">
         <h3>Buttermilk (Chaas)</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -527,7 +527,7 @@
         <img src="images/lassi.jpg" loading="lazy" alt="lassi">
         <h3>Sweet Lassi / Salt Lassi</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -540,7 +540,7 @@
         <img src="images/chai.jpeg" loading="lazy" alt="chai">
         <h3>Masala Chai</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -553,7 +553,7 @@
         <img src="images/coffie.jpeg" loading="lazy" alt="coffie">
         <h3>Cold Coffee</h3>
         <p>Smooth And tasty.</p>
-        <span>₹50/-</span><br><br>
+        <span class="price">₹50/-</span><br><br>
         <label for="qty">Qty:</label>
         <button type="button" onclick="decreaseQty(this)">-</button>
         <input type="number" class="qty-input" min="1" value="1">
@@ -572,7 +572,7 @@
     <form action="/order" method="POST">
       <input type="text" id="name" name="name" placeholder="Your Name" required>
       <input type="text" name="tableNo" placeholder="Table No." required>
-      <textarea name="order" id="orderText" placeholder="Put Your Order here :" required></textarea>
+      <textarea rows="10" name="order" id="orderText" placeholder="Put Your Order here :" required></textarea>
       <div class="btnform">
         <button id="submitorder" type="submit">Submit Order</button>
         <button id="clearorder" type="reset">Clear Order</button>
