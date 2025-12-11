@@ -1,32 +1,51 @@
-🍽️ Restaurant Orders System
+🍽️ Restaurant Online Orders & Table Reservation System
 
-Description:
-This is a full-stack Node.js application for managing restaurant orders. It combines a backend built with Express and MongoDB with a frontend rendered using EJS templates. 
-Customers can place orders via the frontend, and the admin can view, track, and update order statuses in real-time.<br><br>
+A full-stack Node.js + Express + MongoDB application that allows customers to place food orders and reserve tables online, while giving admins a dashboard to manage everything in real time.<br><br>
 
-🛠️ Technologies Used
+🛠️ Tech Stack
+Backend <br><br>
 
---Node.js – Server runtime
+Node.js – Server runtime
 
---Express.js – Backend framework
+Express.js – Backend framework
 
---MongoDB / Mongoose – Database for storing orders
+MongoDB + Mongoose – Database & ODM
 
---EJS – Templating engine for frontend
+dotenv – Environment variable management <br><br>
 
---dotenv – Manage environment variables<br><br>
+🛠️ Frontend
+
+EJS – Templating engine
+
+GSAP – Smooth & modern animations
+
+CSS / JavaScript – UI & interactions <br><br>
 
 ⚡ Features
+Customer Features
 
---Customers can place new orders through a user-friendly EJS frontend.
+Place new food orders through a clean and friendly UI.
 
---Admin panel to view all orders in a structured table format.
+Reserve tables for dinner directly from the website.
 
---Admin can update order status (e.g., pending, completed).
+Instant feedback after reservation or order submission.
 
---Dynamic frontend powered by EJS templates.
+Admin Panel
 
---Secure handling of environment variables using .env.
+View all customer orders in a structured, easy-to-read table.
 
---Fully modular and maintainable code.
+Update order status (Pending → Accepted → Completed).
 
+View all table reservations.
+
+Fully secure admin login (handled via environment variables).
+
+General Features
+
+Modular and clean project structure.
+
+Secure environment configuration using .env.
+
+Real-time updates after order status changes.
+
+Smooth animations with GSAP.
